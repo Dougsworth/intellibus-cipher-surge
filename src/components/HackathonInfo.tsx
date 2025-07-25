@@ -29,7 +29,7 @@ const CRACK_FRAMEWORK = [
   },
   {
     title: "A – Agility",
-    description: "Move fast, learn fast, and don’t be afraid to experiment.",
+    description: "Move fast, learn fast, and don't be afraid to experiment.",
     icon: <GraduationCap className="w-10 h-10 text-purple-500" />,
   },
   {
@@ -63,17 +63,17 @@ const PROBLEM_SOLVING_TIPS = [
     icon: <Brain className="w-10 h-10 text-orange-500" />,
     title: "Stay Curious",
     description:
-      "Experiment, test your ideas, and don’t be afraid to try something new. Curiosity leads to breakthroughs.",
+      "Experiment, test your ideas, and don't be afraid to try something new. Curiosity leads to breakthroughs.",
   },
   {
     icon: <HelpCircle className="w-10 h-10 text-cyan-500" />,
     title: "Ask for Hints",
     description:
-      "Stuck? Don’t hesitate to ask for a nudge. Sometimes a fresh perspective is all you need.",
+      "Stuck? Don't hesitate to ask for a nudge. Sometimes a fresh perspective is all you need.",
   },
   {
     icon: <Smile className="w-10 h-10 text-pink-400" />,
-    title: "Don’t Fear Failure",
+    title: "Don't Fear Failure",
     description:
       "Every wrong answer teaches you something. Keep going, adapt, and celebrate your progress!",
   },
@@ -85,45 +85,86 @@ const PROBLEM_SOLVING_TIPS = [
   },
 ];
 
-const cardBase = "bg-white shadow-xl rounded-2xl border-2 border-border";
-
 const HackathonInfo = () => (
-  <section className="py-24 px-4 bg-muted border-b border-border">
-    <div className="max-w-5xl mx-auto">
+  <section className="py-32 px-6 bg-muted border-b border-border">
+    <div className="max-w-7xl mx-auto">
       {/* Encouragement */}
-      <div className="mb-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-black mb-4 text-foreground tracking-tighter">
+      <div className="mb-24 text-center">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight leading-tight">
           No Experience? No Problem!
         </h2>
-        <p className="text-lg md:text-xl text-muted-foreground font-mono">
-          Whether you’re a first-time hacker or a seasoned pro,{" "}
+        <div className="w-32 h-1 bg-foreground mx-auto mb-8"></div>
+        <p className="text-lg md:text-xl text-muted-foreground font-mono max-w-4xl mx-auto leading-relaxed">
+          Whether you're a first-time hacker or a seasoned pro,{" "}
           <span className="font-bold text-foreground">
-            Intellibus Crack the Code
-          </span>{" "}
-          is for everyone. Dive in, experiment, and grow in a supportive,
-          high-energy environment!
+            everyone starts somewhere
+          </span>
+          . Our event is designed to challenge and support participants at all
+          skill levels.
         </p>
       </div>
 
-      {/* Crack the Code: Problem-Solving Tips */}
-      <div className={`mb-16 p-2 md:p-4 ${cardBase}`}>
-        <h3 className="text-2xl md:text-3xl font-black mb-8 text-foreground flex items-center justify-center gap-3">
-          <KeyRound className="w-10 h-10 text-indigo-500" />
-          Crack the Code: Problem-Solving Tips
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-16">
+      {/* CRACK Framework */}
+      <div className="mb-24">
+        <div className="text-center mb-16">
+          <h3 className="text-3xl md:text-4xl font-black mb-8 text-foreground tracking-tight leading-tight">
+            THE CRACK FRAMEWORK
+          </h3>
+          <div className="w-24 h-1 bg-foreground mx-auto mb-8"></div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Our proven methodology for success in cybersecurity challenges
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
+          {CRACK_FRAMEWORK.map((item, index) => (
+            <div
+              key={index}
+              className="bg-card border border-border rounded-lg p-8 lg:p-10 text-center hover:border-foreground/50 transition-all duration-300 hover:shadow-lg"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-muted/50 rounded-lg mb-6">
+                {item.icon}
+              </div>
+              <h4 className="text-lg font-black mb-4 text-foreground tracking-tight leading-tight">
+                {item.title}
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Problem Solving Tips */}
+      <div className="bg-card border border-border rounded-lg p-10 lg:p-12">
+        <div className="text-center mb-16">
+          <h3 className="text-3xl md:text-4xl font-black mb-8 text-foreground tracking-tight leading-tight">
+            PROBLEM SOLVING STRATEGIES
+          </h3>
+          <div className="w-24 h-1 bg-foreground mx-auto mb-8"></div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Master these techniques to excel in any cybersecurity challenge
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {PROBLEM_SOLVING_TIPS.map((tip, index) => (
             <div
               key={index}
-              className="group hover:scale-105 transition-all duration-300 p-6 md:p-8 rounded-xl bg-muted/30"
+              className="p-6 lg:p-8 border border-border rounded-lg hover:border-foreground/50 transition-all duration-300"
             >
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="flex justify-center">{tip.icon}</div>
-                <div className="space-y-3">
-                  <h4 className="text-lg font-bold text-foreground tracking-tight">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-muted/50 rounded-lg">
+                    {tip.icon}
+                  </div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-lg font-black mb-3 text-foreground tracking-tight leading-tight">
                     {tip.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {tip.description}
                   </p>
                 </div>
@@ -131,55 +172,6 @@ const HackathonInfo = () => (
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Simple Divider with Lock Icon */}
-      <div className="flex items-center justify-center my-12">
-        <div className="h-px w-24 bg-gray-300 rounded-full"></div>
-        <Lock className="mx-4 w-8 h-8 text-gray-400" />
-        <div className="h-px w-24 bg-gray-300 rounded-full"></div>
-      </div>
-
-      {/* CRACK Framework */}
-      <div className={`mb-16 p-2 md:p-4 ${cardBase}`}>
-        <h3 className="text-2xl md:text-3xl font-black mb-8 text-foreground text-center">
-          The CRACK Framework
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {CRACK_FRAMEWORK.map((item, index) => (
-            <div
-              key={index}
-              className="group hover:scale-105 transition-all duration-300"
-            >
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="flex justify-center">{item.icon}</div>
-                <div className="space-y-3">
-                  <h4 className="text-lg font-bold text-foreground tracking-tight">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Motivating Summary */}
-      <div className="text-center">
-        <h3 className="text-2xl md:text-3xl font-black mb-2 text-foreground">
-          Think You’re Not Good Enough? Think Again!
-        </h3>
-        <p className="text-lg md:text-xl text-muted-foreground font-mono">
-          At{" "}
-          <span className="font-bold text-foreground">
-            Intellibus Crack the Code
-          </span>
-          , innovation comes from curiosity and passion—not just experience.
-          Step up and create something amazing. Your mission starts now!
-        </p>
       </div>
     </div>
   </section>

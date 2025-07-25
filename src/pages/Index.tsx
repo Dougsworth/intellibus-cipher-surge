@@ -1,6 +1,7 @@
 import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import VideoSection from "@/components/VideoSection";
+import GallerySection from "@/components/GallerySection";
 import HowItWorks from "@/components/HowItWorks";
 import Prizes from "@/components/Prizes";
 import Rules from "@/components/Rules";
@@ -25,6 +26,7 @@ const Index = () => {
       <div className="relative z-10">
         <HeroSection onOpenForm={() => setShowForm(true)} />
         <VideoSection />
+        <GallerySection onOpenForm={() => setShowForm(true)} />
         <HackathonInfo />
         <FloatingBubbles />
         <HowItWorks onOpenForm={() => setShowForm(true)} />

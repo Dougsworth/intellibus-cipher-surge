@@ -59,7 +59,7 @@ const FloatingBubbles = () => {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground animate-fade-in-up tracking-tighter">
-            GALLERY
+            INNOVATION GALLERY
           </h2>
           <div className="w-24 h-1 bg-foreground mx-auto mb-6"></div>
           <p

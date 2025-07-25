@@ -20,43 +20,54 @@ const VideoSection = () => {
   ];
 
   return (
-    <section id="video-section" className="py-24 px-4 bg-muted border-b border-border relative overflow-hidden">
+    <section
+      id="video-section"
+      className="py-32 px-6 bg-muted border-b border-border relative overflow-hidden"
+    >
       {/* Animated Geometric Elements */}
       <div className="absolute inset-0 pointer-events-none opacity-5">
         <div className="absolute top-20 left-10 w-2 h-2 bg-foreground animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-foreground animate-pulse" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute bottom-40 left-20 w-2 h-2 bg-foreground animate-pulse" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute bottom-20 right-10 w-3 h-3 bg-foreground animate-pulse" style={{ animationDelay: "3s" }}></div>
+        <div
+          className="absolute top-40 right-20 w-3 h-3 bg-foreground animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        <div
+          className="absolute bottom-40 left-20 w-2 h-2 bg-foreground animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute bottom-20 right-10 w-3 h-3 bg-foreground animate-pulse"
+          style={{ animationDelay: "3s" }}
+        ></div>
       </div>
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground animate-fade-in-up tracking-tighter">
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight leading-tight">
             MISSION BRIEFING
           </h2>
-          <div className="w-24 h-1 bg-foreground mx-auto mb-6"></div>
-          <p
-            className="text-xl text-muted-foreground font-mono animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <div className="w-32 h-1 bg-foreground mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl text-muted-foreground font-mono max-w-4xl mx-auto leading-relaxed">
             WATCH THE CHALLENGE OVERVIEW
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Video Section */}
-          <div className="space-y-6">
-            <div className="relative bg-card border-2 border-border rounded-2xl overflow-hidden shadow-xl">
-              <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-20 h-20 bg-foreground text-background rounded-full flex items-center justify-center mx-auto">
+          <div className="space-y-8">
+            <div className="relative bg-card border border-border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="aspect-video bg-gradient-to-br from-muted/50 to-muted flex items-center justify-center">
+                <div className="text-center space-y-6">
+                  <div className="w-20 h-20 bg-foreground text-background rounded-full flex items-center justify-center mx-auto hover:scale-110 transition-transform duration-300">
                     <Play className="w-10 h-10 ml-1" />
                   </div>
-                  <div className="space-y-2">
-                    <p className="text-xl font-bold text-foreground">
+                  <div className="space-y-3">
+                    <p className="text-xl font-black text-foreground tracking-tight">
                       Challenge Video
                     </p>
-                    <p className="text-sm text-muted-foreground">Coming soon</p>
+                    <p className="text-sm text-muted-foreground font-mono">
+                      Coming soon
+                    </p>
                   </div>
                 </div>
               </div>
@@ -64,8 +75,8 @@ const VideoSection = () => {
           </div>
 
           {/* Challenge Categories with Auto-Carousel */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-black text-foreground tracking-tight">
+          <div className="space-y-8">
+            <h3 className="text-2xl md:text-3xl font-black text-foreground tracking-tight leading-tight">
               CHALLENGE CATEGORIES
             </h3>
 
@@ -77,18 +88,18 @@ const VideoSection = () => {
                   showImages ? "opacity-0 pointer-events-none" : "opacity-100"
                 }`}
               >
-                <div className="grid grid-cols-2 gap-4 h-full">
+                <div className="grid grid-cols-2 gap-6 h-full">
                   {/* Cryptography */}
-                  <div className="group bg-gradient-to-br from-white via-gray-50 to-gray-100 border-2 border-gray-200 rounded-xl p-4 hover:border-gray-800 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center">
-                        <Shield className="w-6 h-6 text-white" />
+                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Shield className="w-6 h-6" />
                       </div>
-                      <div className="flex-1">
-                        <h4 className="text-sm font-black text-gray-900 mb-1">
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
                           Cryptography
                         </h4>
-                        <p className="text-xs text-gray-600">
+                        <p className="text-xs text-muted-foreground leading-relaxed">
                           Decode encrypted messages and break complex ciphers
                         </p>
                       </div>
@@ -96,51 +107,51 @@ const VideoSection = () => {
                   </div>
 
                   {/* Forensics */}
-                  <div className="group bg-gradient-to-br from-white via-gray-50 to-gray-100 border-2 border-gray-200 rounded-xl p-4 hover:border-gray-800 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center">
-                        <Target className="w-6 h-6 text-white" />
+                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Target className="w-6 h-6" />
                       </div>
-                      <div className="flex-1">
-                        <h4 className="text-sm font-black text-gray-900 mb-1">
-                          Digital Forensics
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                          Forensics
                         </h4>
-                        <p className="text-xs text-gray-600">
-                          Analyze digital evidence and recover hidden data
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          Analyze digital evidence and uncover hidden data
                         </p>
                       </div>
                     </div>
                   </div>
 
                   {/* Web Exploitation */}
-                  <div className="group bg-gradient-to-br from-white via-gray-50 to-gray-100 border-2 border-gray-200 rounded-xl p-4 hover:border-gray-800 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center">
-                        <Zap className="w-6 h-6 text-white" />
+                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Code className="w-6 h-6" />
                       </div>
-                      <div className="flex-1">
-                        <h4 className="text-sm font-black text-gray-900 mb-1">
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
                           Web Exploitation
                         </h4>
-                        <p className="text-xs text-gray-600">
-                          Find vulnerabilities and exploit web applications
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          Find vulnerabilities in web applications
                         </p>
                       </div>
                     </div>
                   </div>
 
                   {/* Reverse Engineering */}
-                  <div className="group bg-gradient-to-br from-white via-gray-50 to-gray-100 border-2 border-gray-200 rounded-xl p-4 hover:border-gray-800 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center">
-                        <Code className="w-6 h-6 text-white" />
+                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Zap className="w-6 h-6" />
                       </div>
-                      <div className="flex-1">
-                        <h4 className="text-sm font-black text-gray-900 mb-1">
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
                           Reverse Engineering
                         </h4>
-                        <p className="text-xs text-gray-600">
-                          Analyze and understand complex software systems
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          Analyze and understand compiled programs
                         </p>
                       </div>
                     </div>
@@ -148,23 +159,80 @@ const VideoSection = () => {
                 </div>
               </div>
 
-              {/* Background Images Grid */}
+              {/* Second Set of Cards */}
               <div
                 className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
                   showImages ? "opacity-100" : "opacity-0 pointer-events-none"
                 }`}
               >
-                <div className="grid grid-cols-2 gap-4 h-full">
-                  {backgroundImages.map((image, index) => (
-                    <div
-                      key={index}
-                      className="rounded-xl bg-cover bg-center shadow-lg"
-                      style={{
-                        backgroundImage: `url('${image}')`,
-                        filter: "grayscale(100%) brightness(0.8)",
-                      }}
-                    />
-                  ))}
+                <div className="grid grid-cols-2 gap-6 h-full">
+                  {/* Binary Exploitation */}
+                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Code className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                          Binary Exploitation
+                        </h4>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          Exploit memory corruption vulnerabilities
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Steganography */}
+                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Shield className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                          Steganography
+                        </h4>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          Find hidden messages in images and files
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Network Security */}
+                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Target className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                          Network Security
+                        </h4>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          Analyze network traffic and protocols
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Mobile Security */}
+                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Zap className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                          Mobile Security
+                        </h4>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          Test mobile app security and vulnerabilities
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

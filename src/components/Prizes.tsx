@@ -53,19 +53,19 @@ const Prizes = () => {
 
   const specialAwards = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
+      icon: <Zap className="w-10 h-10 text-blue-500" />,
       title: "Most Creative Solution",
       description: "Innovation in problem-solving approach",
       imagePlaceholder: "Creative solution photos coming soon",
     },
     {
-      icon: <Zap className="w-8 h-8 text-green-500" />,
+      icon: <Zap className="w-10 h-10 text-green-500" />,
       title: "Best Problem Solver",
       description: "Exceptional analytical and problem-solving skills",
       imagePlaceholder: "Problem solver photos coming soon",
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
+      icon: <Zap className="w-10 h-10 text-purple-500" />,
       title: "Rookie of the Year",
       description: "Outstanding performance by first-time participants",
       imagePlaceholder: "Rookie photos coming soon",
@@ -73,15 +73,24 @@ const Prizes = () => {
   ];
 
   return (
-    <section className="py-24 px-4 bg-background border-b border-border relative overflow-hidden">
+    <section className="py-32 px-6 bg-background border-b border-border relative overflow-hidden">
       {/* Animated Geometric Elements */}
       <div className="absolute inset-0 pointer-events-none opacity-5">
         <div className="absolute top-20 left-10 w-2 h-2 bg-foreground animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-foreground animate-pulse" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute bottom-40 left-20 w-2 h-2 bg-foreground animate-pulse" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute bottom-20 right-10 w-3 h-3 bg-foreground animate-pulse" style={{ animationDelay: "3s" }}></div>
+        <div
+          className="absolute top-40 right-20 w-3 h-3 bg-foreground animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        <div
+          className="absolute bottom-40 left-20 w-2 h-2 bg-foreground animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute bottom-20 right-10 w-3 h-3 bg-foreground animate-pulse"
+          style={{ animationDelay: "3s" }}
+        ></div>
       </div>
-      
+
       {/* Confetti Animation */}
       <div className="absolute inset-0 pointer-events-none">
         {confetti.map((piece) => (
@@ -99,128 +108,77 @@ const Prizes = () => {
         ))}
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground animate-fade-in-up tracking-tighter">
-            PRIZES & RECOGNITION
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight leading-tight">
+            PRIZES & REWARDS
           </h2>
-          <div className="w-24 h-1 bg-foreground mx-auto mb-6"></div>
-          <p
-            className="text-xl text-muted-foreground font-mono animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            COMPETE FOR GLORY AND REWARDS
+          <div className="w-32 h-1 bg-foreground mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Compete for over $50,000 in prizes and exclusive opportunities
           </p>
         </div>
 
         {/* Main Prizes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-24">
           {prizes.map((prize, index) => (
             <div
               key={index}
-              className="bg-white border-2 border-border rounded-2xl p-8 hover:border-foreground transition-all duration-300 group"
+              className="bg-card border border-border rounded-lg p-8 lg:p-10 text-center hover:border-foreground/50 transition-all duration-300 hover:shadow-lg"
             >
-              <div className="text-center space-y-6">
-                <div className="flex justify-center">
-                  <div className="p-4 bg-background border-2 border-border group-hover:border-foreground transition-all duration-300">
-                    {prize.icon}
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-black text-foreground tracking-tight">
-                    {prize.title}
-                  </h3>
-                  <div className="text-3xl font-black text-foreground">
-                    {prize.value}
-                  </div>
-                  <p className="text-muted-foreground">{prize.description}</p>
-                </div>
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-muted/50 rounded-lg mb-8">
+                {prize.icon}
+              </div>
+              <h3 className="text-2xl font-black mb-4 text-foreground tracking-tight leading-tight">
+                {prize.title}
+              </h3>
+              <div className="text-4xl md:text-5xl font-black mb-6 text-foreground">
+                {prize.value}
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                {prize.description}
+              </p>
+              <div className="bg-muted/30 rounded-lg p-4">
+                <p className="text-sm text-muted-foreground font-mono">
+                  {prize.imagePlaceholder}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Special Awards */}
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-black text-foreground mb-6 tracking-tight">
-            SPECIAL AWARDS
-          </h3>
-          <p className="text-lg text-muted-foreground">
-            Additional recognition for exceptional achievements
-          </p>
-        </div>
+        <div className="bg-card border border-border rounded-lg p-10 lg:p-12">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-black mb-8 text-foreground tracking-tight leading-tight">
+              SPECIAL RECOGNITION AWARDS
+            </h3>
+            <div className="w-24 h-1 bg-foreground mx-auto"></div>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {specialAwards.map((award, index) => (
-            <div
-              key={index}
-              className="bg-white border-2 border-border rounded-xl p-6 hover:border-foreground transition-all duration-300 group"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="p-3 bg-background border-2 border-border group-hover:border-foreground transition-all duration-300">
-                    {award.icon}
-                  </div>
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+            {specialAwards.map((award, index) => (
+              <div
+                key={index}
+                className="text-center p-6 lg:p-8 border border-border rounded-lg hover:border-foreground/50 transition-all duration-300"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-muted/50 rounded-lg mb-6">
+                  {award.icon}
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-lg font-bold text-foreground mb-2">
-                    {award.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    {award.description}
+                <h4 className="text-xl font-black mb-4 text-foreground tracking-tight leading-tight">
+                  {award.title}
+                </h4>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {award.description}
+                </p>
+                <div className="bg-muted/30 rounded-lg p-3">
+                  <p className="text-xs text-muted-foreground font-mono">
+                    {award.imagePlaceholder}
                   </p>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Additional Benefits */}
-        <div className="mt-16 text-center p-8 bg-white border-2 border-border rounded-2xl">
-          <h3 className="text-2xl font-black text-foreground mb-4 tracking-tight">
-            ADDITIONAL BENEFITS
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-            <div className="text-center space-y-3">
-              <div className="w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center mx-auto">
-                <Trophy className="w-6 h-6" />
-              </div>
-              <h4 className="font-bold text-foreground">
-                Industry Recognition
-              </h4>
-              <p className="text-sm text-muted-foreground">
-                Build your cybersecurity reputation
-              </p>
-            </div>
-            <div className="text-center space-y-3">
-              <div className="w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center mx-auto">
-                <Medal className="w-6 h-6" />
-              </div>
-              <h4 className="font-bold text-foreground">Networking</h4>
-              <p className="text-sm text-muted-foreground">
-                Connect with industry professionals
-              </p>
-            </div>
-            <div className="text-center space-y-3">
-              <div className="w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center mx-auto">
-                <Award className="w-6 h-6" />
-              </div>
-              <h4 className="font-bold text-foreground">
-                Career Opportunities
-              </h4>
-              <p className="text-sm text-muted-foreground">
-                Open doors to cybersecurity careers
-              </p>
-            </div>
-            <div className="text-center space-y-3">
-              <div className="w-12 h-12 bg-foreground text-background rounded-full flex items-center justify-center mx-auto">
-                <Zap className="w-6 h-6" />
-              </div>
-              <h4 className="font-bold text-foreground">Skill Development</h4>
-              <p className="text-sm text-muted-foreground">
-                Enhance your technical abilities
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </div>

@@ -11,18 +11,18 @@ import {
 const Rules = () => {
   const ruleCategories = [
     {
-      icon: <Shield className="w-12 h-12 text-foreground" />,
+      icon: <Shield className="w-10 h-10 text-foreground" />,
       title: "CODE OF HONOR",
       subtitle: "Ethical Hacking Principles",
       rules: [
         "Respect all systems and participants",
         "No malicious attacks on infrastructure",
-        "Work independently and ethically",
+        "Share knowledge and collaborate ethically",
         "Report vulnerabilities responsibly",
       ],
     },
     {
-      icon: <AlertTriangle className="w-12 h-12 text-foreground" />,
+      icon: <AlertTriangle className="w-10 h-10 text-foreground" />,
       title: "ENGAGEMENT RULES",
       subtitle: "Scope & Limitations",
       rules: [
@@ -33,18 +33,29 @@ const Rules = () => {
       ],
     },
     {
-      icon: <Trophy className="w-12 h-12 text-foreground" />,
+      icon: <Trophy className="w-10 h-10 text-foreground" />,
       title: "FLAG SUBMISSION",
       subtitle: "Victory Claims",
       rules: [
         "Submit flags in the correct format",
-        "Each flag claimed once per participant",
+        "Each flag claimed once per team",
         "Provide proof of solution when requested",
-        "No sharing flags with other participants",
+        "No sharing flags between teams",
       ],
     },
     {
-      icon: <Code className="w-12 h-12 text-foreground" />,
+      icon: <Users className="w-10 h-10 text-foreground" />,
+      title: "TEAM FORMATION",
+      subtitle: "Squad Dynamics",
+      rules: [
+        "Teams of 2-4 members maximum",
+        "Solo participants welcome",
+        "Mixed skill levels encouraged",
+        "One team captain for communication",
+      ],
+    },
+    {
+      icon: <Code className="w-10 h-10 text-foreground" />,
       title: "TECHNOLOGY ARSENAL",
       subtitle: "Approved Tools",
       rules: [
@@ -55,7 +66,7 @@ const Rules = () => {
       ],
     },
     {
-      icon: <CheckCircle className="w-12 h-12 text-foreground" />,
+      icon: <CheckCircle className="w-10 h-10 text-foreground" />,
       title: "SCORING SYSTEM",
       subtitle: "Points & Recognition",
       rules: [
@@ -68,58 +79,52 @@ const Rules = () => {
   ];
 
   return (
-    <section
-      id="rules-section"
-      className="py-24 px-4 bg-background border-b border-border relative overflow-hidden"
-    >
-      {/* Animated Geometric Elements */}
-      <div className="absolute inset-0 pointer-events-none opacity-5">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-foreground animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-foreground animate-pulse" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute bottom-40 left-20 w-2 h-2 bg-foreground animate-pulse" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute bottom-20 right-10 w-3 h-3 bg-foreground animate-pulse" style={{ animationDelay: "3s" }}></div>
-      </div>
+    <section className="py-32 px-6 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-black mb-6 text-foreground tracking-tighter">
+        {/* Header Section */}
+        <div className="text-center mb-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight leading-tight">
             RULES OF ENGAGEMENT
           </h2>
-          <div className="w-24 h-1 bg-foreground mx-auto mb-6"></div>
-          <p className="text-xl text-muted-foreground font-mono">
+          <div className="w-32 h-1 bg-foreground mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl text-muted-foreground font-mono max-w-3xl mx-auto leading-relaxed">
             MISSION PARAMETERS & OPERATIONAL GUIDELINES
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Rules Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-20">
           {ruleCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-card p-8 border-2 border-border hover:border-foreground transition-all duration-300 group hover:bg-muted"
+              className="bg-card p-8 lg:p-10 border border-border hover:border-foreground/50 transition-all duration-300 group hover:bg-muted/30 rounded-lg animate-hover-lift"
             >
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="group-hover:animate-bounce">
-                  {category.icon}
+              <div className="flex items-start space-x-4 mb-8">
+                <div className="flex-shrink-0 p-3 bg-muted/50 rounded-lg group-hover:bg-muted transition-colors duration-300">
+                  <div className="group-hover:scale-110 transition-transform duration-300">
+                    {category.icon}
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-black text-foreground tracking-tight">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl font-black text-foreground tracking-tight mb-2 leading-tight">
                     {category.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground font-mono">
+                  <p className="text-sm text-muted-foreground font-mono leading-relaxed">
                     {category.subtitle}
                   </p>
                 </div>
               </div>
 
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {category.rules.map((rule, ruleIndex) => (
                   <li
                     key={ruleIndex}
-                    className="text-sm text-muted-foreground flex items-start hover:text-foreground transition-colors duration-200"
+                    className="text-sm text-muted-foreground flex items-start hover:text-foreground transition-colors duration-200 leading-relaxed group/item"
                   >
-                    <span className="text-foreground mr-3 mt-1 font-bold">
+                    <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200">
                       ■
                     </span>
-                    {rule}
+                    <span className="flex-1">{rule}</span>
                   </li>
                 ))}
               </ul>
@@ -127,59 +132,96 @@ const Rules = () => {
           ))}
         </div>
 
-        <div className="bg-card p-8 border-2 border-foreground">
-          <div className="text-center">
-            <AlertTriangle className="w-16 h-16 text-foreground mx-auto mb-6" />
-            <h3 className="text-2xl font-black text-foreground mb-8 tracking-tight">
+        {/* Critical Mission Parameters */}
+        <div className="bg-card p-10 lg:p-12 border-2 border-foreground rounded-lg animate-hover-glow">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-muted/50 rounded-full mb-8 animate-pulse-slow">
+              <AlertTriangle className="w-10 h-10 text-foreground" />
+            </div>
+            <h3 className="text-3xl md:text-4xl font-black text-foreground mb-6 tracking-tight leading-tight">
               CRITICAL MISSION PARAMETERS
             </h3>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div>
-                <h4 className="font-black text-foreground mb-4 text-lg">
-                  PROHIBITED ACTIVITIES
-                </h4>
-                <ul className="text-sm text-muted-foreground space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-foreground mr-2 font-bold">■</span>
+            <div className="w-24 h-1 bg-foreground mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 text-left">
+            <div>
+              <h4 className="font-black text-foreground mb-6 text-xl tracking-tight">
+                PROHIBITED ACTIVITIES
+              </h4>
+              <ul className="text-sm text-muted-foreground space-y-4">
+                <li className="flex items-start hover:text-foreground transition-colors duration-200">
+                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                    ■
+                  </span>
+                  <span className="flex-1 leading-relaxed">
                     Attacking infrastructure outside scope
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-foreground mr-2 font-bold">■</span>
+                  </span>
+                </li>
+                <li className="flex items-start hover:text-foreground transition-colors duration-200">
+                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                    ■
+                  </span>
+                  <span className="flex-1 leading-relaxed">
                     Disrupting other participants
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-foreground mr-2 font-bold">■</span>
+                  </span>
+                </li>
+                <li className="flex items-start hover:text-foreground transition-colors duration-200">
+                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                    ■
+                  </span>
+                  <span className="flex-1 leading-relaxed">
                     Sharing solutions during competition
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-foreground mr-2 font-bold">■</span>
+                  </span>
+                </li>
+                <li className="flex items-start hover:text-foreground transition-colors duration-200">
+                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                    ■
+                  </span>
+                  <span className="flex-1 leading-relaxed">
                     Any illegal or unethical activities
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-black text-foreground mb-4 text-lg">
-                  ENCOURAGED BEHAVIOR
-                </h4>
-                <ul className="text-sm text-muted-foreground space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-foreground mr-2 font-bold">■</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-black text-foreground mb-6 text-xl tracking-tight">
+                ENCOURAGED BEHAVIOR
+              </h4>
+              <ul className="text-sm text-muted-foreground space-y-4">
+                <li className="flex items-start hover:text-foreground transition-colors duration-200">
+                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                    ■
+                  </span>
+                  <span className="flex-1 leading-relaxed">
                     Creative problem-solving approaches
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-foreground mr-2 font-bold">■</span>
-                    Learning and growing your skills
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-foreground mr-2 font-bold">■</span>
+                  </span>
+                </li>
+                <li className="flex items-start hover:text-foreground transition-colors duration-200">
+                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                    ■
+                  </span>
+                  <span className="flex-1 leading-relaxed">
+                    Helping teammates learn and grow
+                  </span>
+                </li>
+                <li className="flex items-start hover:text-foreground transition-colors duration-200">
+                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                    ■
+                  </span>
+                  <span className="flex-1 leading-relaxed">
                     Documenting your discovery process
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-foreground mr-2 font-bold">■</span>
+                  </span>
+                </li>
+                <li className="flex items-start hover:text-foreground transition-colors duration-200">
+                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                    ■
+                  </span>
+                  <span className="flex-1 leading-relaxed">
                     Asking mentors for guidance
-                  </li>
-                </ul>
-              </div>
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
