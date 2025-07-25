@@ -20,7 +20,7 @@ const VideoSection = () => {
   ];
 
   return (
-    <section className="py-24 px-4 bg-muted border-b border-border relative overflow-hidden">
+    <section id="video-section" className="py-24 px-4 bg-muted border-b border-border relative overflow-hidden">
       {/* Animated Geometric Elements */}
       <div className="absolute inset-0 pointer-events-none opacity-5">
         <div className="absolute top-20 left-10 w-2 h-2 bg-foreground animate-pulse"></div>
