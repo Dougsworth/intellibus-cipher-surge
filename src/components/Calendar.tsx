@@ -2,7 +2,11 @@ import React from "react";
 import { Calendar as CalendarIcon, Clock, MapPin, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const Calendar = () => {
+interface CalendarProps {
+  onOpenForm: () => void;
+}
+
+const Calendar = ({ onOpenForm }: CalendarProps) => {
   const events = [
     {
       date: "March 15-17, 2024",
@@ -86,12 +90,8 @@ const Calendar = () => {
               </p>
 
               {/* CTA Button */}
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={() => console.log(`Register for ${event.title}`)}
-              >
-                Learn More
+              <Button variant="outline" className="w-full" onClick={onOpenForm}>
+                Register Now
               </Button>
             </div>
           ))}
@@ -107,7 +107,7 @@ const Calendar = () => {
               Don't miss out on this incredible opportunity to test your skills,
               learn from experts, and compete with the best codebreakers!
             </p>
-            <Button size="lg" className="px-8">
+            <Button size="lg" className="px-8" onClick={onOpenForm}>
               Register Now
             </Button>
           </div>

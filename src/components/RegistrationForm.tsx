@@ -35,21 +35,32 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
 
   return (
     <div className="relative">
-      {/* Close Button */}
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 p-2 hover:bg-muted rounded-full transition-colors"
-      >
-        <X className="w-5 h-5" />
-      </button>
+      {/* Animated Code Elements */}
+      <div className="absolute inset-0 pointer-events-none opacity-5">
+        <div className="absolute top-10 left-10 text-xs font-mono text-foreground animate-pulse">
+          &lt;form&gt;
+        </div>
+        <div
+          className="absolute top-20 right-10 text-xs font-mono text-foreground animate-pulse"
+          style={{ animationDelay: "1s" }}
+        >
+          input[type="text"]
+        </div>
+        <div
+          className="absolute bottom-20 left-10 text-xs font-mono text-foreground animate-pulse"
+          style={{ animationDelay: "2s" }}
+        >
+          &lt;/form&gt;
+        </div>
+      </div>
 
       <div className="p-6">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2 text-foreground">
-            Register for Crack the Code
+          <h2 className="text-3xl font-bold mb-2 text-foreground font-mono">
+            &lt;Register /&gt;
           </h2>
-          <p className="text-muted-foreground">
-            Join the ultimate codebreaking challenge
+          <p className="text-muted-foreground font-mono">
+            // Join the ultimate codebreaking challenge
           </p>
         </div>
 
@@ -98,16 +109,30 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
               <MapPin className="w-4 h-4" />
               Parish
             </Label>
-            <Input
+            <select
               id="parish"
               name="parish"
-              type="text"
-              placeholder="Enter your parish"
               value={formData.parish}
               onChange={handleChange}
               required
-              className="w-full"
-            />
+              className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              <option value="">Select your parish</option>
+              <option value="Kingston">Kingston</option>
+              <option value="St. Andrew">St. Andrew</option>
+              <option value="St. Catherine">St. Catherine</option>
+              <option value="Clarendon">Clarendon</option>
+              <option value="Manchester">Manchester</option>
+              <option value="St. Elizabeth">St. Elizabeth</option>
+              <option value="Westmoreland">Westmoreland</option>
+              <option value="Hanover">Hanover</option>
+              <option value="St. James">St. James</option>
+              <option value="Trelawny">Trelawny</option>
+              <option value="St. Ann">St. Ann</option>
+              <option value="St. Mary">St. Mary</option>
+              <option value="Portland">Portland</option>
+              <option value="St. Thomas">St. Thomas</option>
+            </select>
           </div>
 
           {/* Level Field */}
@@ -132,10 +157,10 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full py-6 text-lg font-semibold"
+            className="w-full py-6 text-lg font-semibold font-mono bg-foreground hover:bg-foreground/90 text-background"
             size="lg"
           >
-            Register Now
+            submit();
           </Button>
         </form>
 

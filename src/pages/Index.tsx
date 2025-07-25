@@ -29,7 +29,7 @@ const Index = () => {
         <FloatingBubbles />
         <HowItWorks onOpenForm={() => setShowForm(true)} />
         <Prizes />
-        <Calendar />
+        <Calendar onOpenForm={() => setShowForm(true)} />
         <Rules />
 
         {/* Registration Form Modal */}

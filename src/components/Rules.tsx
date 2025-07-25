@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Shield,
   CheckCircle,
@@ -69,8 +70,15 @@ const Rules = () => {
   return (
     <section
       id="rules-section"
-      className="py-24 px-4 bg-background border-b border-border"
+      className="py-24 px-4 bg-background border-b border-border relative overflow-hidden"
     >
+      {/* Animated Geometric Elements */}
+      <div className="absolute inset-0 pointer-events-none opacity-5">
+        <div className="absolute top-20 left-10 w-2 h-2 bg-foreground animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-3 h-3 bg-foreground animate-pulse" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute bottom-40 left-20 w-2 h-2 bg-foreground animate-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute bottom-20 right-10 w-3 h-3 bg-foreground animate-pulse" style={{ animationDelay: "3s" }}></div>
+      </div>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-5xl font-black mb-6 text-foreground tracking-tighter">
