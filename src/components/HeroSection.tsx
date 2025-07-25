@@ -29,11 +29,13 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
 
       {/* Animated Logo - Absolute positioned overlay */}
       <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 pointer-events-none z-20">
-        <AnimatedLogo
-          variant="bounce-rotate"
-          size="md"
-          className="opacity-80 md:opacity-90"
-        />
+        <div className="w-24 h-24 opacity-80 md:opacity-90">
+          <img
+            src="/logo_transparent.png"
+            alt="Logo"
+            className="w-full h-full object-contain"
+          />
+        </div>
       </div>
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
