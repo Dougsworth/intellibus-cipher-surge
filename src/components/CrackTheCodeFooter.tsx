@@ -31,8 +31,8 @@ const CrackTheCodeFooter = ({ onOpenForm }: CrackTheCodeFooterProps) => (
               About Crack the Code
             </h2>
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-              Crack the Code is Intellibus's annual codebreaking and
-              cybersecurity road tour, designed to challenge, inspire, and unite
+              Crack the Code is Intellibus annual codebreaking and cybersecurity
+              road tour, designed to challenge, inspire, and unite
               problem-solvers from all backgrounds. Whether you're a first-timer
               or a seasoned pro, you'll find a place to learn, compete, and
               connect.
