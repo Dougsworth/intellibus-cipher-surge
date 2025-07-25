@@ -17,7 +17,7 @@ const Rules = () => {
       rules: [
         "Respect all systems and participants",
         "No malicious attacks on infrastructure",
-        "Share knowledge and collaborate ethically",
+        "Work independently and ethically",
         "Report vulnerabilities responsibly",
       ],
     },
@@ -40,7 +40,7 @@ const Rules = () => {
         "Submit flags in the correct format",
         "Each flag claimed once per participant",
         "Provide proof of solution when requested",
-        "No sharing flags between participants",
+        "No sharing flags with other participants",
       ],
     },
     {

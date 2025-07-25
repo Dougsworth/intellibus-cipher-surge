@@ -47,9 +47,9 @@ const HowItWorks = ({ onOpenForm }: HowItWorksProps) => {
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Team Collaboration",
+      title: "Individual Challenge",
       description:
-        "Work solo or form teams to tackle complex challenges together.",
+        "Work independently to tackle complex challenges on your own.",
     },
     {
       icon: <Brain className="w-6 h-6" />,

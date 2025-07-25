@@ -27,9 +27,9 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
         ></div>
       </div>
 
-      {/* Animated Logo - Absolute positioned overlay */}
-      <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 pointer-events-none z-20">
-        <div className="w-24 h-24 opacity-80 md:opacity-90">
+      {/* Animated Logo - Responsive positioning */}
+      <div className="absolute top-1/3 md:top-1/4 left-1/2 transform -translate-x-1/2 pointer-events-none z-20">
+        <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 opacity-80 md:opacity-90">
           <img
             src="/logo_transparent.png"
             alt="Logo"

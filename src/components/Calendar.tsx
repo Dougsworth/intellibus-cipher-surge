@@ -58,10 +58,6 @@ const Calendar = ({ onOpenForm }: CalendarProps) => {
               key={index}
               className="bg-card border border-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              {/* Date Badge */}
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                {event.date}
-              </div>
 
               {/* Title */}
               <h3 className="text-xl font-bold mb-3 text-foreground">
