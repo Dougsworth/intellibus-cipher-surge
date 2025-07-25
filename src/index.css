@@ -59,7 +59,7 @@
 
 @layer components {
   .animate-logo-float {
-    animation: logo-float 4s ease-in-out infinite;
+    animation: logo-float 15s ease-in-out infinite;
   }
 
   .animate-logo-glow {

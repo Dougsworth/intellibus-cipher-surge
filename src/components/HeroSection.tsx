@@ -27,17 +27,6 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
         ></div>
       </div>
 
-      {/* Animated Logo - Responsive positioning */}
-      <div className="absolute top-1/3 md:top-1/4 left-1/2 transform -translate-x-1/2 pointer-events-none z-20">
-        <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 opacity-80 md:opacity-90 animate-logo-float">
-          <img
-            src="/logo_transparent.png"
-            alt="Logo"
-            className="w-full h-full object-contain"
-          />
-        </div>
-      </div>
-
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
         {/* Icon set */}
         <div className="flex justify-center mb-8 md:mb-10 animate-fade-in-up">
@@ -55,12 +44,19 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
         </div>
 
         {/* Main title */}
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black mb-6 md:mb-8 animate-scale-in tracking-tight leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black mb-10 md:mb-12 animate-scale-in tracking-tight leading-tight">
           <span className="text-foreground hover:animate-glitch-text transition-all duration-300">
             CRACK
           </span>
           <br />
-          <span className="text-foreground border-b-2 md:border-b-4 border-foreground animate-glitch-sporadic transition-all duration-300">
+          <div className="flex justify-center mb-2 mt-4">
+            <img
+              src="/logo_transparent.png"
+              alt="Logo"
+              className="w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 opacity-90 md:opacity-95 animate-logo-float"
+            />
+          </div>
+          <span className="text-foreground animate-glitch-sporadic transition-all duration-300">
             THE CODE
           </span>
         </h1>

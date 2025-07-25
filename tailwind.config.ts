@@ -136,7 +136,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "logo-float": "logo-float 3s ease-in-out infinite",
+        "logo-float": "logo-float 8s ease-in-out infinite",
         "logo-glow": "logo-glow 2s ease-in-out infinite",
         "logo-pulse-rotate": "logo-pulse-rotate 15s ease-in-out infinite",
         "logo-bounce-rotate": "logo-bounce-rotate 60s ease-in-out infinite",
