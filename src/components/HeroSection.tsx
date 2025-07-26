@@ -46,20 +46,18 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
         {/* Main title */}
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black mb-10 md:mb-12 animate-scale-in tracking-tight leading-tight">
           <span className="text-foreground hover:animate-glitch-text transition-all duration-300">
-            CRACK
-          </span>
-          <br />
-          <div className="flex justify-center mb-2 mt-4">
-            <img
-              src="/logo_transparent.png"
-              alt="Logo"
-              className="w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 opacity-90 md:opacity-95 animate-logo-float"
-            />
-          </div>
-          <span className="text-foreground animate-glitch-sporadic transition-all duration-300">
-            THE CODE
+            CRACK THE CODE
           </span>
         </h1>
+
+        {/* Logo */}
+        <div className="flex justify-center mb-6 mt-4">
+          <img
+            src="/logo_transparent.png"
+            alt="Logo"
+            className="w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 opacity-90 md:opacity-95 animate-logo-float"
+          />
+        </div>
 
         {/* Subtitle with enhanced animations */}
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-foreground relative group text-center">

@@ -81,7 +81,7 @@ const VideoSection = () => {
             </h3>
 
             {/* Content Container */}
-            <div className="relative h-80">
+            <div className="relative min-h-80">
               {/* Challenge Categories Cards */}
               <div
                 className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
