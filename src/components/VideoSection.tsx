@@ -88,18 +88,18 @@ const VideoSection = () => {
                   showImages ? "opacity-0 pointer-events-none" : "opacity-100"
                 }`}
               >
-                <div className="grid grid-cols-2 gap-6 h-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 h-full">
                   {/* Cryptography */}
-                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Shield className="w-6 h-6" />
+                  <div className="group bg-card border border-border rounded-lg p-4 sm:p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Shield className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm sm:text-base font-black text-foreground mb-2 tracking-tight leading-tight">
                           Cryptography
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                           Decode encrypted messages and break complex ciphers
                         </p>
                       </div>
@@ -107,16 +107,16 @@ const VideoSection = () => {
                   </div>
 
                   {/* Forensics */}
-                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Target className="w-6 h-6" />
+                  <div className="group bg-card border border-border rounded-lg p-4 sm:p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Target className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm sm:text-base font-black text-foreground mb-2 tracking-tight leading-tight">
                           Forensics
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                           Analyze digital evidence and uncover hidden data
                         </p>
                       </div>
@@ -124,16 +124,16 @@ const VideoSection = () => {
                   </div>
 
                   {/* Web Exploitation */}
-                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Code className="w-6 h-6" />
+                  <div className="group bg-card border border-border rounded-lg p-4 sm:p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Code className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm sm:text-base font-black text-foreground mb-2 tracking-tight leading-tight">
                           Web Exploitation
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                           Find vulnerabilities in web applications
                         </p>
                       </div>
@@ -141,16 +141,16 @@ const VideoSection = () => {
                   </div>
 
                   {/* Reverse Engineering */}
-                  <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Zap className="w-6 h-6" />
+                  <div className="group bg-card border border-border rounded-lg p-4 sm:p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-foreground text-background rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Zap className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm sm:text-base font-black text-foreground mb-2 tracking-tight leading-tight">
                           Reverse Engineering
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                           Analyze and understand compiled programs
                         </p>
                       </div>
@@ -165,7 +165,7 @@ const VideoSection = () => {
                   showImages ? "opacity-100" : "opacity-0 pointer-events-none"
                 }`}
               >
-                <div className="grid grid-cols-2 gap-6 h-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 h-full">
                   {/* Binary Exploitation */}
                   <div className="group bg-card border border-border rounded-lg p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                     <div className="flex items-start space-x-4">
