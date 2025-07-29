@@ -80,10 +80,10 @@ const LoadingScreen = ({
             className="text-center text-white mb-8 animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
-            <h2 className="text-3xl font-bold mb-2 animate-pulse bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-mono font-bold mb-2 animate-pulse bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Welcome to Cipher Surge
             </h2>
-            <p className="text-gray-300 text-lg">Loading your adventure...</p>
+            <p className="text-gray-300 text-lg font-mono">Loading your adventure...</p>
           </div>
         )}
 

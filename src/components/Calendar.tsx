@@ -41,12 +41,12 @@ const Calendar = ({ onOpenForm }: CalendarProps) => {
         <div className="text-center mb-24">
           <div className="flex items-center justify-center gap-4 mb-8">
             <CalendarIcon className="w-10 h-10 text-foreground" />
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-mono font-black uppercase tracking-tight leading-tight">
               Event Schedule
             </h2>
           </div>
           <div className="w-32 h-1 bg-foreground mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl font-mono text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Mark your calendar for the most exciting codebreaking event of the
             year!
           </p>
@@ -67,7 +67,7 @@ const Calendar = ({ onOpenForm }: CalendarProps) => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-black mb-6 text-foreground tracking-tight leading-tight">
+              <h3 className="text-xl font-mono font-black mb-6 text-foreground tracking-tight leading-tight">
                 {event.title}
               </h3>
 
@@ -90,7 +90,7 @@ const Calendar = ({ onOpenForm }: CalendarProps) => {
               </div>
 
               {/* Description */}
-              <p className="text-muted-foreground text-sm mb-8 leading-relaxed flex-grow">
+              <p className="font-mono text-muted-foreground text-sm mb-8 leading-relaxed flex-grow">
                 {event.description}
               </p>
 
@@ -98,7 +98,7 @@ const Calendar = ({ onOpenForm }: CalendarProps) => {
               <div className="mt-auto">
                 <Button
                   variant="outline"
-                  className="w-full border-2 border-foreground text-foreground hover:bg-foreground hover:text-background font-black transition-all duration-300"
+                  className="w-full border-2 border-foreground text-foreground hover:bg-foreground hover:text-background font-mono font-black transition-all duration-300"
                   onClick={onOpenForm}
                 >
                   REGISTER NOW
@@ -111,16 +111,16 @@ const Calendar = ({ onOpenForm }: CalendarProps) => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-card border border-border rounded-lg p-10 lg:p-12 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-black mb-6 text-foreground tracking-tight leading-tight">
+            <h3 className="text-2xl md:text-3xl font-mono font-black mb-6 text-foreground tracking-tight leading-tight">
               Ready to Join the Challenge?
             </h3>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg font-mono text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
               Don't miss out on this incredible opportunity to test your skills,
               learn from experts, and compete for amazing prizes.
             </p>
             <Button
               onClick={onOpenForm}
-              className="bg-foreground hover:bg-foreground/90 text-background font-black text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-none transform hover:scale-105 transition-all duration-300 shadow-lg border-2 border-foreground"
+              className="bg-foreground hover:bg-foreground/90 text-background font-mono font-black text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-none transform hover:scale-105 transition-all duration-300 shadow-lg border-2 border-foreground"
             >
               SECURE YOUR SPOT
             </Button>

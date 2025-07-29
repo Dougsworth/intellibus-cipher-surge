@@ -44,7 +44,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
         </div>
 
         {/* Main title */}
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black mb-10 md:mb-12 animate-scale-in tracking-tight leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-mono font-black mb-10 md:mb-12 animate-scale-in tracking-tight leading-tight">
           <span className="text-foreground hover:animate-glitch-text transition-all duration-300">
             CRACK THE CODE
           </span>
@@ -60,7 +60,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
         </div>
 
         {/* Subtitle with enhanced animations */}
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-foreground relative group text-center">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-mono font-bold mb-6 md:mb-8 text-foreground relative group text-center">
           <span className="relative z-10 animate-road-tour-glow animate-road-tour-pulse">
             <span className="inline-block animate-typing overflow-hidden whitespace-nowrap opacity-0">
               INTELLIBUS ROAD TOUR
@@ -73,7 +73,7 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
           <p className="text-lg sm:text-xl md:text-2xl mb-3 md:mb-4 text-muted-foreground font-mono leading-relaxed">
             24 HOURS TO BREAK BARRIERS
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-foreground font-bold leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-foreground font-mono font-bold leading-relaxed">
             DECODE THE FUTURE. YOUR MISSION STARTS NOW.
           </p>
         </div>
@@ -85,14 +85,14 @@ const HeroSection = ({ onOpenForm }: HeroSectionProps) => {
         >
           <Button
             onClick={onOpenForm}
-            className="w-full md:w-auto bg-foreground hover:bg-foreground/90 text-background font-black text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-none transform hover:scale-105 transition-all duration-300 shadow-lg border-2 border-foreground animate-hover-glow"
+            className="w-full md:w-auto bg-foreground hover:bg-foreground/90 text-background font-mono font-black text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-none transform hover:scale-105 transition-all duration-300 shadow-lg border-2 border-foreground animate-hover-glow"
           >
             ACCEPT MISSION
           </Button>
 
           <Button
             variant="outline"
-            className="w-full md:w-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background font-black text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-none transform hover:scale-105 transition-all duration-300 animate-hover-glow"
+            className="w-full md:w-auto border-2 border-foreground text-foreground hover:bg-foreground hover:text-background font-mono font-black text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 rounded-none transform hover:scale-105 transition-all duration-300 animate-hover-glow"
             onClick={() =>
               document
                 .getElementById("video-section")

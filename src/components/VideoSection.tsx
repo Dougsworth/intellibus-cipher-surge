@@ -43,7 +43,7 @@ const VideoSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-mono font-black mb-8 text-foreground tracking-tight leading-tight">
             MISSION BRIEFING
           </h2>
           <div className="w-32 h-1 bg-foreground mx-auto mb-8"></div>
@@ -62,7 +62,7 @@ const VideoSection = () => {
                     <Play className="w-10 h-10 ml-1" />
                   </div>
                   <div className="space-y-3">
-                    <p className="text-xl font-black text-foreground tracking-tight">
+                    <p className="text-xl font-mono font-black text-foreground tracking-tight">
                       Challenge Video
                     </p>
                     <p className="text-sm text-muted-foreground font-mono">
@@ -76,7 +76,7 @@ const VideoSection = () => {
 
           {/* Challenge Categories with Auto-Carousel */}
           <div className="space-y-8">
-            <h3 className="text-2xl md:text-3xl font-black text-foreground tracking-tight leading-tight">
+            <h3 className="text-2xl md:text-3xl font-mono font-black text-foreground tracking-tight leading-tight">
               CHALLENGE CATEGORIES
             </h3>
 
@@ -96,10 +96,10 @@ const VideoSection = () => {
                         <Shield className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm sm:text-base font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm sm:text-base font-mono font-black text-foreground mb-2 tracking-tight leading-tight">
                           Cryptography
                         </h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm font-mono text-muted-foreground leading-relaxed">
                           Decode encrypted messages and break complex ciphers
                         </p>
                       </div>
@@ -113,10 +113,10 @@ const VideoSection = () => {
                         <Target className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm sm:text-base font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm sm:text-base font-mono font-black text-foreground mb-2 tracking-tight leading-tight">
                           Forensics
                         </h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm font-mono text-muted-foreground leading-relaxed">
                           Analyze digital evidence and uncover hidden data
                         </p>
                       </div>
@@ -130,10 +130,10 @@ const VideoSection = () => {
                         <Code className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm sm:text-base font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm sm:text-base font-mono font-black text-foreground mb-2 tracking-tight leading-tight">
                           Web Exploitation
                         </h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm font-mono text-muted-foreground leading-relaxed">
                           Find vulnerabilities in web applications
                         </p>
                       </div>
@@ -147,10 +147,10 @@ const VideoSection = () => {
                         <Zap className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm sm:text-base font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm sm:text-base font-mono font-black text-foreground mb-2 tracking-tight leading-tight">
                           Reverse Engineering
                         </h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs sm:text-sm font-mono text-muted-foreground leading-relaxed">
                           Analyze and understand compiled programs
                         </p>
                       </div>
@@ -173,10 +173,10 @@ const VideoSection = () => {
                         <Code className="w-6 h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm font-mono font-black text-foreground mb-2 tracking-tight leading-tight">
                           Binary Exploitation
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-xs font-mono text-muted-foreground leading-relaxed">
                           Exploit memory corruption vulnerabilities
                         </p>
                       </div>
@@ -190,10 +190,10 @@ const VideoSection = () => {
                         <Shield className="w-6 h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm font-mono font-black text-foreground mb-2 tracking-tight leading-tight">
                           Steganography
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-xs font-mono text-muted-foreground leading-relaxed">
                           Find hidden messages in images and files
                         </p>
                       </div>
@@ -207,10 +207,10 @@ const VideoSection = () => {
                         <Target className="w-6 h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm font-mono font-black text-foreground mb-2 tracking-tight leading-tight">
                           Network Security
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-xs font-mono text-muted-foreground leading-relaxed">
                           Analyze network traffic and protocols
                         </p>
                       </div>
@@ -224,10 +224,10 @@ const VideoSection = () => {
                         <Zap className="w-6 h-6" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-black text-foreground mb-2 tracking-tight leading-tight">
+                        <h4 className="text-sm font-mono font-black text-foreground mb-2 tracking-tight leading-tight">
                           Mobile Security
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-xs font-mono text-muted-foreground leading-relaxed">
                           Test mobile app security and vulnerabilities
                         </p>
                       </div>

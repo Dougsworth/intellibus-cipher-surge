@@ -111,11 +111,11 @@ const Prizes = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-mono font-black mb-8 text-foreground tracking-tight leading-tight">
             PRIZES & REWARDS
           </h2>
           <div className="w-32 h-1 bg-foreground mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl font-mono text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Compete for over $50,000 in prizes and exclusive opportunities
           </p>
         </div>
@@ -130,13 +130,13 @@ const Prizes = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-muted/50 rounded-lg mb-8">
                 {prize.icon}
               </div>
-              <h3 className="text-2xl font-black mb-4 text-foreground tracking-tight leading-tight">
+              <h3 className="text-2xl font-mono font-black mb-4 text-foreground tracking-tight leading-tight">
                 {prize.title}
               </h3>
-              <div className="text-4xl md:text-5xl font-black mb-6 text-foreground">
+              <div className="text-4xl md:text-5xl font-mono font-black mb-6 text-foreground">
                 {prize.value}
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="font-mono text-muted-foreground leading-relaxed mb-6">
                 {prize.description}
               </p>
               <div className="bg-muted/30 rounded-lg p-4">
@@ -151,7 +151,7 @@ const Prizes = () => {
         {/* Special Awards */}
         <div className="bg-card border border-border rounded-lg p-10 lg:p-12">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-black mb-8 text-foreground tracking-tight leading-tight">
+            <h3 className="text-3xl md:text-4xl font-mono font-black mb-8 text-foreground tracking-tight leading-tight">
               SPECIAL RECOGNITION AWARDS
             </h3>
             <div className="w-24 h-1 bg-foreground mx-auto"></div>
@@ -166,14 +166,14 @@ const Prizes = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-muted/50 rounded-lg mb-6">
                   {award.icon}
                 </div>
-                <h4 className="text-xl font-black mb-4 text-foreground tracking-tight leading-tight">
-                  {award.title}
-                </h4>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {award.description}
-                </p>
+                              <h4 className="text-xl font-mono font-black mb-4 text-foreground tracking-tight leading-tight">
+                {award.title}
+              </h4>
+                              <p className="font-mono text-muted-foreground leading-relaxed mb-6">
+                {award.description}
+              </p>
                 <div className="bg-muted/30 rounded-lg p-3">
-                  <p className="text-xs text-muted-foreground font-mono">
+                  <p className="text-xs font-mono text-muted-foreground">
                     {award.imagePlaceholder}
                   </p>
                 </div>

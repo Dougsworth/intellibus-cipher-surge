@@ -90,7 +90,7 @@ const HackathonInfo = () => (
     <div className="max-w-7xl mx-auto">
       {/* Encouragement */}
       <div className="mb-24 text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight leading-tight">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-mono font-black mb-8 text-foreground tracking-tight leading-tight">
           No Experience? No Problem!
         </h2>
         <div className="w-32 h-1 bg-foreground mx-auto mb-8"></div>
@@ -107,11 +107,11 @@ const HackathonInfo = () => (
       {/* CRACK Framework */}
       <div className="mb-24">
         <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-black mb-8 text-foreground tracking-tight leading-tight">
+          <h3 className="text-3xl md:text-4xl font-mono font-black mb-8 text-foreground tracking-tight leading-tight">
             THE CRACK FRAMEWORK
           </h3>
           <div className="w-24 h-1 bg-foreground mx-auto mb-8"></div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg font-mono text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Our proven methodology for success in cybersecurity challenges
           </p>
         </div>
@@ -125,10 +125,10 @@ const HackathonInfo = () => (
               <div className="inline-flex items-center justify-center w-16 h-16 bg-muted/50 rounded-lg mb-6">
                 {item.icon}
               </div>
-              <h4 className="text-lg font-black mb-4 text-foreground tracking-tight leading-tight">
+              <h4 className="text-lg font-mono font-black mb-4 text-foreground tracking-tight leading-tight">
                 {item.title}
               </h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-sm font-mono text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -139,11 +139,11 @@ const HackathonInfo = () => (
       {/* Problem Solving Tips */}
       <div className="bg-card border border-border rounded-lg p-10 lg:p-12">
         <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-black mb-8 text-foreground tracking-tight leading-tight">
+          <h3 className="text-3xl md:text-4xl font-mono font-black mb-8 text-foreground tracking-tight leading-tight">
             PROBLEM SOLVING STRATEGIES
           </h3>
           <div className="w-24 h-1 bg-foreground mx-auto mb-8"></div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg font-mono text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Master these techniques to excel in any cybersecurity challenge
           </p>
         </div>
@@ -161,10 +161,10 @@ const HackathonInfo = () => (
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-lg font-black mb-3 text-foreground tracking-tight leading-tight">
+                  <h4 className="text-lg font-mono font-black mb-3 text-foreground tracking-tight leading-tight">
                     {tip.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm font-mono text-muted-foreground leading-relaxed">
                     {tip.description}
                   </p>
                 </div>

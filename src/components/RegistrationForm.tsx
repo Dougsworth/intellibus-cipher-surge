@@ -56,7 +56,7 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
 
       <div className="p-6">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2 text-foreground font-mono">
+          <h2 className="text-3xl font-mono font-bold mb-2 text-foreground">
             &lt;Register /&gt;
           </h2>
           <p className="text-muted-foreground font-mono">
@@ -67,7 +67,7 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name Field */}
           <div className="space-y-2">
-            <Label htmlFor="name" className="flex items-center gap-2">
+            <Label htmlFor="name" className="flex items-center gap-2 font-mono">
               <User className="w-4 h-4" />
               Full Name
             </Label>
@@ -85,7 +85,7 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
 
           {/* Age Field */}
           <div className="space-y-2">
-            <Label htmlFor="age" className="flex items-center gap-2">
+            <Label htmlFor="age" className="flex items-center gap-2 font-mono">
               <Calendar className="w-4 h-4" />
               Age
             </Label>
@@ -105,7 +105,7 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
 
           {/* Parish Field */}
           <div className="space-y-2">
-            <Label htmlFor="parish" className="flex items-center gap-2">
+            <Label htmlFor="parish" className="flex items-center gap-2 font-mono">
               <MapPin className="w-4 h-4" />
               Parish
             </Label>
@@ -142,7 +142,7 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
 
           {/* Level Field */}
           <div className="space-y-2">
-            <Label htmlFor="level" className="flex items-center gap-2">
+            <Label htmlFor="level" className="flex items-center gap-2 font-mono">
               <GraduationCap className="w-4 h-4" />
               Experience Level
             </Label>
@@ -167,7 +167,7 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full py-6 text-lg font-semibold font-mono bg-foreground hover:bg-foreground/90 text-background"
+            className="w-full py-6 text-lg font-mono font-semibold bg-foreground hover:bg-foreground/90 text-background"
             size="lg"
           >
             submit();
@@ -176,7 +176,7 @@ const RegistrationForm = ({ onClose }: RegistrationFormProps) => {
 
         {/* Additional Info */}
         <div className="mt-8 p-4 bg-muted/50 rounded-lg">
-          <p className="text-sm text-muted-foreground text-center">
+          <p className="text-sm font-mono text-muted-foreground text-center">
             By registering, you agree to participate in the Crack the Code
             hackathon and follow all competition rules and guidelines.
           </p>

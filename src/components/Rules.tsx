@@ -83,7 +83,7 @@ const Rules = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-foreground tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-mono font-black mb-8 text-foreground tracking-tight leading-tight">
             RULES OF ENGAGEMENT
           </h2>
           <div className="w-32 h-1 bg-foreground mx-auto mb-8"></div>
@@ -106,7 +106,7 @@ const Rules = () => {
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-xl font-black text-foreground tracking-tight mb-2 leading-tight">
+                  <h3 className="text-xl font-mono font-black text-foreground tracking-tight mb-2 leading-tight">
                     {category.title}
                   </h3>
                   <p className="text-sm text-muted-foreground font-mono leading-relaxed">
@@ -119,9 +119,9 @@ const Rules = () => {
                 {category.rules.map((rule, ruleIndex) => (
                   <li
                     key={ruleIndex}
-                    className="text-sm text-muted-foreground flex items-start hover:text-foreground transition-colors duration-200 leading-relaxed group/item"
+                    className="text-sm font-mono text-muted-foreground flex items-start hover:text-foreground transition-colors duration-200 leading-relaxed group/item"
                   >
-                    <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200">
+                    <span className="text-foreground mr-3 mt-1.5 font-mono font-bold flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200">
                       ■
                     </span>
                     <span className="flex-1">{rule}</span>
@@ -138,7 +138,7 @@ const Rules = () => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-muted/50 rounded-full mb-8 animate-pulse-slow">
               <AlertTriangle className="w-10 h-10 text-foreground" />
             </div>
-            <h3 className="text-3xl md:text-4xl font-black text-foreground mb-6 tracking-tight leading-tight">
+            <h3 className="text-3xl md:text-4xl font-mono font-black text-foreground mb-6 tracking-tight leading-tight">
               CRITICAL MISSION PARAMETERS
             </h3>
             <div className="w-24 h-1 bg-foreground mx-auto"></div>
@@ -146,12 +146,12 @@ const Rules = () => {
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 text-left">
             <div>
-              <h4 className="font-black text-foreground mb-6 text-xl tracking-tight">
+              <h4 className="font-mono font-black text-foreground mb-6 text-xl tracking-tight">
                 PROHIBITED ACTIVITIES
               </h4>
-              <ul className="text-sm text-muted-foreground space-y-4">
+              <ul className="text-sm font-mono text-muted-foreground space-y-4">
                 <li className="flex items-start hover:text-foreground transition-colors duration-200">
-                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                  <span className="text-foreground mr-3 mt-1.5 font-mono font-bold flex-shrink-0">
                     ■
                   </span>
                   <span className="flex-1 leading-relaxed">
@@ -159,7 +159,7 @@ const Rules = () => {
                   </span>
                 </li>
                 <li className="flex items-start hover:text-foreground transition-colors duration-200">
-                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                  <span className="text-foreground mr-3 mt-1.5 font-mono font-bold flex-shrink-0">
                     ■
                   </span>
                   <span className="flex-1 leading-relaxed">
@@ -167,7 +167,7 @@ const Rules = () => {
                   </span>
                 </li>
                 <li className="flex items-start hover:text-foreground transition-colors duration-200">
-                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                  <span className="text-foreground mr-3 mt-1.5 font-mono font-bold flex-shrink-0">
                     ■
                   </span>
                   <span className="flex-1 leading-relaxed">
@@ -175,7 +175,7 @@ const Rules = () => {
                   </span>
                 </li>
                 <li className="flex items-start hover:text-foreground transition-colors duration-200">
-                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                  <span className="text-foreground mr-3 mt-1.5 font-mono font-bold flex-shrink-0">
                     ■
                   </span>
                   <span className="flex-1 leading-relaxed">
@@ -185,12 +185,12 @@ const Rules = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-black text-foreground mb-6 text-xl tracking-tight">
+              <h4 className="font-mono font-black text-foreground mb-6 text-xl tracking-tight">
                 ENCOURAGED BEHAVIOR
               </h4>
-              <ul className="text-sm text-muted-foreground space-y-4">
+              <ul className="text-sm font-mono text-muted-foreground space-y-4">
                 <li className="flex items-start hover:text-foreground transition-colors duration-200">
-                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                  <span className="text-foreground mr-3 mt-1.5 font-mono font-bold flex-shrink-0">
                     ■
                   </span>
                   <span className="flex-1 leading-relaxed">
@@ -198,7 +198,7 @@ const Rules = () => {
                   </span>
                 </li>
                 <li className="flex items-start hover:text-foreground transition-colors duration-200">
-                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                  <span className="text-foreground mr-3 mt-1.5 font-mono font-bold flex-shrink-0">
                     ■
                   </span>
                   <span className="flex-1 leading-relaxed">
@@ -206,7 +206,7 @@ const Rules = () => {
                   </span>
                 </li>
                 <li className="flex items-start hover:text-foreground transition-colors duration-200">
-                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                  <span className="text-foreground mr-3 mt-1.5 font-mono font-bold flex-shrink-0">
                     ■
                   </span>
                   <span className="flex-1 leading-relaxed">
@@ -214,7 +214,7 @@ const Rules = () => {
                   </span>
                 </li>
                 <li className="flex items-start hover:text-foreground transition-colors duration-200">
-                  <span className="text-foreground mr-3 mt-1.5 font-bold flex-shrink-0">
+                  <span className="text-foreground mr-3 mt-1.5 font-mono font-bold flex-shrink-0">
                     ■
                   </span>
                   <span className="flex-1 leading-relaxed">
